@@ -7,6 +7,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: quiz_db
+    ports:
+      - '5433:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -15,6 +17,8 @@ services:
     build: .
     volumes:
       - .:/code
+    environment:
+      - SQLALCHEMY_DATABASE_URL=postgresql://postgres:postgres@db/quiz_db
     ports:
       - '8000:8000'
     depends_on:
@@ -23,5 +27,3 @@ services:
 
 volumes:
   postgres_data:
-
-
