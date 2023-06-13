@@ -1,4 +1,7 @@
 # quiz API
+
+![example workflow](https://github.com/daminovvv/quiz-api/actions/workflows/main.yaml/badge.svg)
+
 ---
 ## Описание
 quiz API - это веб сервис для обработки вопросов для викторины
