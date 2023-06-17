@@ -1,10 +1,10 @@
 import datetime
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Item(BaseModel):
-    questions_num: int
+    questions_num: int = Field(ge=0)
 
 
 class QuestionSchema(BaseModel):
